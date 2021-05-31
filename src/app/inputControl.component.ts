@@ -1,0 +1,10 @@
+export class inputControl
+{
+    
+    control()
+    {
+
+    }
+
+
+}

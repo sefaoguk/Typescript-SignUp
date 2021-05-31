@@ -1,0 +1,77 @@
+<div class="contain">
+    <div class="m">
+        <h2>SIGN UP</h2>
+        <form [formGroup]="exform">
+
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Username" formControlName="username">
+                <small *ngIf="!exform.get('username').valid && exform.get('username').touched" class="text">Zorunlu
+                    Alan* (Min: 4 Karakter)
+                    <span class="text" *ngIf="exform.get('username').errors.control" >
+                        Lütfen _ . - Haricinde lütfen yabancı karakter kullanmayınız.
+                    </span>
+                </small>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Name" formControlName="name">
+                <small *ngIf="!exform.get('name').valid && exform.get('name').touched" class="text">Zorunlu Alan*
+                </small>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Surname" formControlName="surname">
+                <small *ngIf="!exform.get('surname').valid && exform.get('surname').touched" class="text">Zorunlu
+                    Alan*</small>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="E-mail" formControlName="email">
+                <small *ngIf="!exform.get('email').valid && exform.get('email').touched" class="text">Zorunlu Alan*
+                    (info@example.com)
+                </small>
+            </div>
+            <div class="password">
+                <div class="form-group">
+
+                    <input type="password" class="form-control" TextBox.PasswordChar=‘*’ placeholder="Password"
+                        formControlName="password1">
+                    <small *ngIf="!exform.get('password1').valid && exform.get('password1').touched " class="text">
+                        <span *ngIf="exform.get('password1').errors['required']">
+                            Zorunlu Alan*
+                        </span>
+                    </small>
+                    <small class="text" *ngIf="exform.get('password1').hasError('minlength')">
+                        (Min:8 karakter)
+                    </small>
+                </div>
+                <div class="form-group">
+                    <input type="password" class="form-control" placeholder="Password" formControlName="password2">
+                    <small *ngIf="!exform.get('password2').valid && exform.get('password2').touched" class="text">
+                        <span *ngIf="exform.get('password2').hasError('required')">
+                            Zorunlu Alan*
+                        </span>
+                    </small>
+                    <small
+                        *ngIf="exform.hasError('notmatched') && exform.get('password2').valid  || exform.get('password2').hasError('minlength')"
+                        class="text"> Şifre eşleşmedi</small>
+                </div>
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" placeholder="Telephone">
+            </div>
+            <div class="contentBottom">
+                <div class="checked">
+                    <input type="checkbox" formControlName="checked">
+                    <span>Güvenlik ve Sözleşme politika koşullarını kabul ediyorum</span>
+                </div>
+                <div class="privacyError">
+                    <small class="text" *ngIf="exform.get('checked')"> Lütfen devam etmek için politika koşullarını
+                        kabul edin</small>
+                </div>
+            </div>
+            <div class="Btns">
+                <button class="btn btn-primary" [disabled]='exform.invalid' (click)="buttonClick()">Sign Up</button>
+                <span class="message" *ngIf="isDisplay">{{message}}</span>
+            </div>
+        </form>
+       
+    </div>
+</div>

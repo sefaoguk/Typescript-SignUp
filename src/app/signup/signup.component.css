@@ -1,0 +1,131 @@
+*
+{
+justify-content: center;
+background-image: none;
+color: white;
+background-color: transparent;
+filter:alpha(opacity=40);
+
+}
+form
+{
+    height: 560px;
+}
+.form-group
+{
+    height: 60px;
+}
+h2
+{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+input::placeholder
+{
+    color: rgb(197, 197, 197);
+}
+small
+{
+    color: black;
+}
+.contain
+{
+    display: flex;
+}
+.m
+{
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #3333;
+    box-shadow: 5px 5px 15px 10px rgba(0,0,0,0.6);
+    border-radius: 10px;
+    padding: 30px;
+    margin-top:60px;
+    width: 35%;
+}
+.message
+{
+    display: flex;
+    align-self: center;
+}
+.form-group input
+{
+    border-color: white;
+    border-left-style: none;
+    border-right-style: none;
+    border-top-style: none;
+    border-radius: 0px;
+    background-color: transparent;
+}
+input:focus
+{
+    color: white;
+}
+.password
+{
+    display: flex;
+}
+.password input
+{
+    width: 90%;
+}
+.text
+{
+    color:rgb(255, 251, 0); 
+}
+.checked
+{
+    display: flex;
+    font-size: 14px;   
+}
+.checked input
+{
+    width: 20px;
+    align-self: center;
+}
+.privacyError
+{
+    margin-left: 5px;
+    margin-bottom: 20px;
+}
+.fa-eye
+{
+    background-color: violet;
+    width: 60px;
+    height: 30px;
+    color: black;
+    margin-right: 10px;
+    cursor: pointer;
+    z-index: 1;
+}
+.btns
+{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+height: 30px;
+
+}
+.btn{
+    margin-bottom: 10px;
+    background-color:#007bff;
+}
+@media all and (max-width:800px)
+{
+    .password
+    {
+        display: flex;
+        flex-direction: column;
+    }
+   .text-checked
+   {
+    
+   }
+}
+
+
+
+
+
